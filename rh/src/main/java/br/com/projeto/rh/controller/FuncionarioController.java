@@ -144,13 +144,4 @@ public class FuncionarioController {
 	
 	
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 }

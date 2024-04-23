@@ -92,12 +92,5 @@ public class CargosController {
         return "redirect:/listaCargos";
     }
 	
-	
-	
-	
-	
-	
-	
-	
-	
+
 }
