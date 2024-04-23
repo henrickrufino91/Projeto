@@ -1,0 +1,37 @@
+package br.com.projeto.rh.model;
+
+
+
+public class Consulta1 {
+
+	
+	
+	private Funcionario funcionario;
+	
+	
+	private Cargos cargos;
+	
+	
+	
+	private Departamento departamento;
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+}

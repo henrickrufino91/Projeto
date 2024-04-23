@@ -1,0 +1,66 @@
+package br.com.projeto.rh.model;
+
+import java.util.Objects;
+
+
+public class Consulta1 {
+
+	
+	
+	private Funcionario funcionario;
+	
+	
+	private Cargos cargos;
+	
+	
+	private Departamento departamento;
+
+
+
+	public Consulta1(Funcionario funcionario, Cargos cargos, Departamento departamento) {
+		super();
+		this.funcionario = funcionario;
+		this.cargos = cargos;
+		this.departamento = departamento;
+	}
+
+
+
+	public Consulta1() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(cargos, departamento, funcionario);
+	}
+
+
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Consulta1 other = (Consulta1) obj;
+		return Objects.equals(cargos, other.cargos) && Objects.equals(departamento, other.departamento)
+				&& Objects.equals(funcionario, other.funcionario);
+	}
+
+
+
+	@Override
+	public String toString() {
+		return "Consulta1 [funcionario=" + funcionario + ", cargos=" + cargos + ", departamento=" + departamento + "]";
+	}
+	
+		
+	
+	
+}

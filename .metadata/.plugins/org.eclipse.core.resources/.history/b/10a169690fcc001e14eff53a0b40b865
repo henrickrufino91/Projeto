@@ -1,0 +1,25 @@
+package br.com.projeto.rh.repository;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+
+import br.com.projeto.rh.model.Departamento;
+import java.util.List;
+
+
+public interface DepartamentoRepository extends JpaRepository<Departamento, Integer> {
+
+	@Query("select d from Departamento d where d.nome like %?1% ")
+	List<Departamento> findByNome(String nome);
+	
+	
+	@Query("select d.nome,SUM(f.salario) AS total from Departamento d,Funcionario f,Cargos c where"
+			+ " d.codigo = c.departamento.codigo and c.codigo = f.cargos.codigo"
+			+ " GROUP BY d.nome")
+	List<Departamento> gastos();
+	
+	
+	
+	
+	
+}

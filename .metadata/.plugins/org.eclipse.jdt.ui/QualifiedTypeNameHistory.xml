@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="java.lang.Double"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="org.springframework.data.jpa.repository.Query"/>
+    <fullyQualifiedTypeName name="br.com.projeto.rh.model.FuncionarioDTO"/>
+    <fullyQualifiedTypeName name="br.com.projeto.rh.model.Cargos"/>
+    <fullyQualifiedTypeName name="jakarta.persistence.Tuple"/>
+    <fullyQualifiedTypeName name="br.com.projeto.rh.model.Funcionario"/>
+    <fullyQualifiedTypeName name="java.lang.annotation.Native"/>
+    <fullyQualifiedTypeName name="jakarta.persistence.NamedNativeQuery"/>
+    <fullyQualifiedTypeName name="br.com.projeto.rh.DTO.FuncionarioDTO"/>
+</qualifiedTypeNameHistroy>

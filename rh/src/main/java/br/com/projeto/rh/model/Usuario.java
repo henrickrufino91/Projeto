@@ -1,0 +1,144 @@
+package br.com.projeto.rh.model;
+
+import java.util.Objects;
+
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
+
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+
+@Entity
+public class Usuario {
+
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Integer codigo;
+	
+	
+	@NotBlank(message = "Campo não pode ser vazio")
+	@NotNull(message = "Campo não pode ser vazio")
+	@NotEmpty(message = "Campo não pode ser vazio")
+	private String nome;
+	
+	@NotBlank(message = "Campo não pode ser vazio")
+	@NotNull(message = "Campo não pode ser vazio")
+	@NotEmpty(message = "Campo não pode ser vazio")
+	private String email;
+	
+	
+	@NotBlank(message = "Campo não pode ser vazio")
+	@NotNull(message = "Campo não pode ser vazio")
+	@NotEmpty(message = "Campo não pode ser vazio")
+	@Column(unique = true)
+	private String login;
+	
+	
+	@NotBlank(message = "Campo não pode ser vazio")
+	@NotNull(message = "Campo não pode ser vazio")
+	@NotEmpty(message = "Campo não pode ser vazio")
+	private String senha;
+
+
+	public Usuario() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+
+	public Usuario(Integer codigo,
+			@NotBlank(message = "Campo não pode ser vazio") @NotNull(message = "Campo não pode ser vazio") @NotEmpty(message = "Campo não pode ser vazio") String nome,
+			@NotBlank(message = "Campo não pode ser vazio") @NotNull(message = "Campo não pode ser vazio") @NotEmpty(message = "Campo não pode ser vazio") String email,
+			@NotBlank(message = "Campo não pode ser vazio") @NotNull(message = "Campo não pode ser vazio") @NotEmpty(message = "Campo não pode ser vazio") String login,
+			@NotBlank(message = "Campo não pode ser vazio") @NotNull(message = "Campo não pode ser vazio") @NotEmpty(message = "Campo não pode ser vazio") String senha) {
+		super();
+		this.codigo = codigo;
+		this.nome = nome;
+		this.email = email;
+		this.login = login;
+		this.senha = senha;
+	}
+
+
+	public Integer getCodigo() {
+		return codigo;
+	}
+
+
+	public void setCodigo(Integer codigo) {
+		this.codigo = codigo;
+	}
+
+
+	public String getNome() {
+		return nome;
+	}
+
+
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+
+
+	public String getEmail() {
+		return email;
+	}
+
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+
+	public String getLogin() {
+		return login;
+	}
+
+
+	public void setLogin(String login) {
+		this.login = login;
+	}
+
+
+	public String getSenha() {
+		return senha;
+	}
+
+
+	public void setSenha(String senha) {
+		this.senha = senha;
+	}
+
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(codigo);
+	}
+
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Usuario other = (Usuario) obj;
+		return Objects.equals(codigo, other.codigo);
+	}
+
+
+	@Override
+	public String toString() {
+		return "Usuario [codigo=" + codigo + ", nome=" + nome + ", email=" + email + ", login=" + login + ", senha="
+				+ senha + "]";
+	}
+	
+	
+}
