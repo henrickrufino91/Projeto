@@ -31,12 +31,14 @@ public class Usuario {
 	
 	
 	@NotBlank(message = "Campo não pode ser vazio")
-	@Column(unique = true,nullable = false)
+	@Column(nullable = false)
+	@Column(unique = true)
 	private String login;
 	
 	
 	@NotBlank(message = "Campo não pode ser vazio")
-	@Column(nullable = false)
+	@NotNull(message = "Campo não pode ser vazio")
+	@NotEmpty(message = "Campo não pode ser vazio")
 	private String senha;
 
 
