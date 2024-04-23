@@ -156,7 +156,7 @@
                                             	
   											<select class="form-select" name="f" aria-label="Default select example" th:field="*{cargos}">
 							 				
-       						 				<option th:each="c : ${carg}" th:value="${c.codigo}" th:text="${c.nome}" />
+       						 				<option th:each="c : ${carg}" th:value="${c.codCargo}" th:text="${c.nomeCargo}" />
                            					</select>
                                             <label for="inputEmail">Cargo</label>	
                                             
