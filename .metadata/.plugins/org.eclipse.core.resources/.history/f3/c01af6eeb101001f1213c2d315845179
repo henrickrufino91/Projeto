@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>Editar Funcionário(a)</title>
+        <title>Novo Cargo</title>
         <link href="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/style.min.css" rel="stylesheet" />
         <link href="css/styles.css" rel="stylesheet" />
         <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
@@ -117,57 +117,39 @@
                       
                       <div class="row justify-content-center" >
                             <div class="col-lg-5" >
-                                <div class="card shadow-lg border-0 rounded-lg mt-5" style="top: -50px;">
-                                    <div class="card-header" style="background-color: rgb(209, 255, 176);"><h3 class="text-center font-weight-light my-4">Novo(a) Funcionário(a)</h3></div>
+                                <div class="card shadow-lg border-0 rounded-lg mt-5" >
+                                    <div class="card-header" style="background-color: rgb(209, 255, 176);"><h3 class="text-center font-weight-light my-4">Novo Cargo</h3></div>
                                     <div class="card-body" style="background-color: rgb(209, 255, 176);">
-                                        <form method="post" th:action="@{/inserirFuncionario}" th:object="${funcionario}" autocomplete="off">
+                                        <form method="post" th:action="@{/inserirCargo}" th:object="${cargo}" autocomplete="off">
 											
 											<div class="alert alert-danger" role="alert" th:if="${msg}">
 												<strong th:text="${msg}"></strong>						
 											</div>
 											
 											<div class="form-floating mb-3" id="a1">
-                                                <input class="form-control" th:field="*{codFuncionario}" id="inputEmail" type="hidden" />
+                                                <input class="form-control" th:field="*{codCargo}" id="inputEmail" type="hidden" />
                                                 <label for="inputEmail">Codigo</label>
                                             </div>
 											
 											
                                             <div class="form-floating mb-3" id="a1">
-                                                <input class="form-control" th:field="*{nomeFuncionario}" id="inputEmail" type="text" />
+                                                <input class="form-control" th:field="*{nomeCargo}" id="inputEmail" type="text" />
                                                 <label for="inputEmail">Nome</label>
                                             </div>
                                             
-                                             <div class="form-floating mb-3" id="a1">
-                                                <input class="form-control" th:field="*{dataNascimento}" id="inputEmail" type="date" />
-                                                <label for="inputEmail">Data de Nascimento</label>
-                                            </div>
-                                            
-                                             <div class="form-floating mb-3" id="a1">
-                                                <input class="form-control" th:field="*{salario}" id="inputEmail" type="number" />
-                                                <label for="inputEmail">Salário</label>
-                                            </div>
-                                            
-                                             <div class="form-floating mb-3" id="a1">
-                                                <input class="form-control" th:field="*{dataEntrada}" id="inputEmail" type="date" />
-                                                <label for="inputEmail">Data de Entrada</label>
-                                            </div>
-                                            
-                                             <div class="form-floating mb-3" id="a1">
-                                                <input class="form-control" th:field="*{dataSaida}" id="inputEmail" type="date" />
-                                                <label for="inputEmail">Data de Saida</label>
-                                            </div>
                                             
                                             <div class="form-floating mb-3" id="a1">
                                             	
-  											<select class="form-select" name="f" aria-label="Default select example" th:field="*{cargos}">
+  											<select class="form-select" name="f" aria-label="Default select example" th:field="*{departamento}">
 							 				
-       						 				<option th:each="c : ${carg}" th:value="${c.codCargo}" th:text="${c.nomeCargo}" />
+       						 				<option th:each="d : ${departamentos}" th:value="${d.codDepartamento}" th:text="${d.nome}" />
                            					</select>
-                                            <label for="inputEmail">Cargo</label>	
+                                            <label for="inputEmail">Departamento</label>	
                                             
                                             </div>
-                                                                                                                                 
-                                            <div class="form-floating mb-3" style="left: 150px;">
+                                            
+                                            
+                                           <div class="form-floating mb-3" style="left: 150px;">
 										    
 										    <button type="submit" class="btn btn-primary"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-floppy" viewBox="0 0 16 16">
   											<path d="M11 2H9v3h2z"/>
@@ -175,7 +157,7 @@
 											</svg>  Salvar</button>
 												
 												
-                                            <a class="btn btn-primary" th:href="@{/listaFuncionarios}"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-return-left" viewBox="0 0 16 16">
+                                            <a class="btn btn-primary" th:href="@{/listaCargos}"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-return-left" viewBox="0 0 16 16">
   											<path fill-rule="evenodd" d="M14.5 1.5a.5.5 0 0 1 .5.5v4.8a2.5 2.5 0 0 1-2.5 2.5H2.707l3.347 3.346a.5.5 0 0 1-.708.708l-4.2-4.2a.5.5 0 0 1 0-.708l4-4a.5.5 0 1 1 .708.708L2.707 8.3H12.5A1.5 1.5 0 0 0 14 6.8V2a.5.5 0 0 1 .5-.5"/>
 											</svg> Voltar</a>
                                                 
