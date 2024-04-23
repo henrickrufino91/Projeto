@@ -25,7 +25,7 @@ Para rodar o repositório é necessário clonar o mesmo, dar o seguinte comando 
       <a href="https://github.com/henrickrufino91">
         <img src="https://avatars.githubusercontent.com/u/56259137?v=4" width="100px;" alt="Foto de Henrique Rufino no GitHub"/><br>
         <sub>
-          <b>tatialveso</b>
+          <b>Henrique Rufino</b>
         </sub>
       </a>
     </td>
