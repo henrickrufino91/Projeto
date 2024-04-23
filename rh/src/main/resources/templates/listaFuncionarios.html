@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
     <head>
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -161,11 +161,11 @@
         		<tbody>
             	<tr scope="row" th:each="f : ${funcionarios}">
 
-                <td th:text="${f.nome}"></td>
+                <td th:text="${f.nomeFuncionario}"></td>
                 <td th:text="${f.salario}"></td>      
                 <td th:text="${#temporals.format(f.dataEntrada, 'dd/MM/yyyy')}"></td> 
                 <td th:text="${#temporals.format(f.dataSaida, 'dd/MM/yyyy')}"></td>
-                <td th:text="${f.cargos.nome}"></td>                
+                <td th:text="${f.cargos.nomeCargo}"></td>                
                 <td>
                  	
 				<a class="btn btn-danger" th:href="@{'/removerFuncionario?codigo=' + ${f.codigo}}"> Remover

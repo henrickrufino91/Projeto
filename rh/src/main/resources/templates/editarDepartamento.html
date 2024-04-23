@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
     <head>
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -128,13 +128,13 @@
 											
 											
 											<div class="form-floating mb-3" id="a1">
-                                                <input class="form-control" th:field="*{codigo}" id="inputEmail" type="hidden" />
+                                                <input class="form-control" th:field="*{codDepartamento}" id="inputEmail" type="hidden" />
                                                 <label for="inputEmail">Codigo</label>
                                             </div>
 											
 											
                                             <div class="form-floating mb-3" id="a1">
-                                                <input class="form-control" th:field="*{nome}" id="inputEmail" type="text" />
+                                                <input class="form-control" th:field="*{nomeDepartamento}" id="inputEmail" type="text" />
                                                 <label for="inputEmail">Nome</label>
                                             </div>
                                                          

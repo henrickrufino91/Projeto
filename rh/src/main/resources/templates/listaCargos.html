@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
     <head>
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -162,7 +162,7 @@
             	<tr scope="row" th:each="c : ${cargos}">
 
                 
-                <td th:text="${c.nome}"></td>
+                <td th:text="${c.nomeCargo}"></td>
                        
                                
                 <td>
