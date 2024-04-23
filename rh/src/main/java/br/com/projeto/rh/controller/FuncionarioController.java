@@ -46,11 +46,11 @@ public class FuncionarioController {
 	public String inserir(@Valid Funcionario funcionario,Model model) {
 		
 		
-		if (funcionario.getCodigo() == null) {
+		if (funcionario.getCodFuncionario() == null) {
 			funcionarioService.inserir(funcionario);
 		} else {
-			Funcionario funcionario2 = funcionarioService.buscarPorId(funcionario.getCodigo());
-			funcionario2.setNome(funcionario.getNome());
+			Funcionario funcionario2 = funcionarioService.buscarPorId(funcionario.getCodFuncionario());
+			funcionario2.setNomeFuncionario(funcionario.getNomeFuncionario());
 			funcionario2.setSalario(funcionario.getSalario());
 			funcionario2.setDataNascimento(funcionario.getDataNascimento());
 			funcionario2.setDataEntrada(funcionario.getDataEntrada());

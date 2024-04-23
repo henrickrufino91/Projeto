@@ -54,21 +54,15 @@ public class Funcionario {
 	private Cargos cargos;
 
 
-	public Funcionario() {
-		super();
-		// TODO Auto-generated constructor stub
-	}
-
-
-	public Funcionario(Integer codigo,
-			@NotBlank(message = "Campo não pode ser vazio") @NotNull(message = "Campo não pode ser vazio") @NotEmpty(message = "Campo não pode ser vazio") String nome,
+	public Funcionario(Integer codFuncionario,
+			@NotBlank(message = "Campo não pode ser vazio") @NotNull(message = "Campo não pode ser vazio") @NotEmpty(message = "Campo não pode ser vazio") String nomeFuncionario,
 			@NotBlank(message = "Campo não pode ser vazio") @NotNull(message = "Campo não pode ser vazio") @NotEmpty(message = "Campo não pode ser vazio") LocalDate dataNascimento,
 			@NotBlank(message = "Campo não pode ser vazio") @NotNull(message = "Campo não pode ser vazio") @NotEmpty(message = "Campo não pode ser vazio") Double salario,
 			@NotBlank(message = "Campo não pode ser vazio") @NotNull(message = "Campo não pode ser vazio") @NotEmpty(message = "Campo não pode ser vazio") LocalDate dataEntrada,
 			LocalDate dataSaida, Cargos cargos) {
 		super();
-		this.codFuncionario = codigo;
-		this.nomeFuncionario = nome;
+		this.codFuncionario = codFuncionario;
+		this.nomeFuncionario = nomeFuncionario;
 		this.dataNascimento = dataNascimento;
 		this.salario = salario;
 		this.dataEntrada = dataEntrada;
@@ -77,23 +71,29 @@ public class Funcionario {
 	}
 
 
-	public Integer getCodigo() {
+	public Funcionario() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+
+	public Integer getCodFuncionario() {
 		return codFuncionario;
 	}
 
 
-	public void setCodigo(Integer codigo) {
-		this.codFuncionario = codigo;
+	public void setCodFuncionario(Integer codFuncionario) {
+		this.codFuncionario = codFuncionario;
 	}
 
 
-	public String getNome() {
+	public String getNomeFuncionario() {
 		return nomeFuncionario;
 	}
 
 
-	public void setNome(String nome) {
-		this.nomeFuncionario = nome;
+	public void setNomeFuncionario(String nomeFuncionario) {
+		this.nomeFuncionario = nomeFuncionario;
 	}
 
 
@@ -168,9 +168,10 @@ public class Funcionario {
 
 	@Override
 	public String toString() {
-		return "Funcionario [codigo=" + codFuncionario + ", nome=" + nomeFuncionario + ", dataNascimento=" + dataNascimento + ", salario="
-				+ salario + ", dataEntrada=" + dataEntrada + ", dataSaida=" + dataSaida + ", cargos=" + cargos + "]";
+		return "Funcionario [codFuncionario=" + codFuncionario + ", nomeFuncionario=" + nomeFuncionario
+				+ ", dataNascimento=" + dataNascimento + ", salario=" + salario + ", dataEntrada=" + dataEntrada
+				+ ", dataSaida=" + dataSaida + ", cargos=" + cargos + "]";
 	}
-	
-	
+
+
 }

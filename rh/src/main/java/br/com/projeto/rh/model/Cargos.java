@@ -33,39 +33,39 @@ public class Cargos {
 	private Departamento departamento;
 
 
+	public Cargos(Integer codCargo,
+			@NotBlank(message = "Campo não pode ser vazio") @NotNull(message = "Campo não pode ser vazio") @NotEmpty(message = "Campo não pode ser vazio") String nomeCargo,
+			Departamento departamento) {
+		super();
+		this.codCargo = codCargo;
+		this.nomeCargo = nomeCargo;
+		this.departamento = departamento;
+	}
+
+
 	public Cargos() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
 
 
-	public Cargos(Integer codigo,
-			@NotBlank(message = "Campo não pode ser vazio") @NotNull(message = "Campo não pode ser vazio") @NotEmpty(message = "Campo não pode ser vazio") String nome,
-			Departamento departamento) {
-		super();
-		this.codCargo = codigo;
-		this.nomeCargo = nome;
-		this.departamento = departamento;
-	}
-
-
-	public Integer getCodigo() {
+	public Integer getCodCargo() {
 		return codCargo;
 	}
 
 
-	public void setCodigo(Integer codigo) {
-		this.codCargo = codigo;
+	public void setCodCargo(Integer codCargo) {
+		this.codCargo = codCargo;
 	}
 
 
-	public String getNome() {
+	public String getNomeCargo() {
 		return nomeCargo;
 	}
 
 
-	public void setNome(String nome) {
-		this.nomeCargo = nome;
+	public void setNomeCargo(String nomeCargo) {
+		this.nomeCargo = nomeCargo;
 	}
 
 
@@ -100,9 +100,10 @@ public class Cargos {
 
 	@Override
 	public String toString() {
-		return "Cargos [codigo=" + codCargo + ", nome=" + nomeCargo + ", departamento=" + departamento + "]";
+		return "Cargos [codCargo=" + codCargo + ", nomeCargo=" + nomeCargo + ", departamento=" + departamento + "]";
 	}
-	
+
+
 	
 	
 }

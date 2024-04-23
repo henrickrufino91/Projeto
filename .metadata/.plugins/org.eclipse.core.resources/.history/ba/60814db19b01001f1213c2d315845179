@@ -1,0 +1,57 @@
+package br.com.projeto.rh.model;
+
+import java.util.Objects;
+
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
+
+@Entity
+public class Cargos {
+
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Integer codCargo;
+	
+	
+	@NotBlank(message = "Campo não pode ser vazio")
+	@NotNull(message = "Campo não pode ser vazio")
+	@NotEmpty(message = "Campo não pode ser vazio")
+	private String nomeCargo;
+
+
+	@ManyToOne
+	@JoinColumn(name = "Departamento_codigo",nullable = false)
+	private Departamento departamento;
+
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+}

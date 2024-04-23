@@ -26,37 +26,37 @@ public class Departamento {
 	private String nomeDepartamento;
 
 
+	public Departamento(Integer codDepartamento,
+			@NotBlank(message = "Campo não pode ser vazio") @NotNull(message = "Campo não pode ser vazio") @NotEmpty(message = "Campo não pode ser vazio") String nomeDepartamento) {
+		super();
+		this.codDepartamento = codDepartamento;
+		this.nomeDepartamento = nomeDepartamento;
+	}
+
+
 	public Departamento() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
 
 
-	public Departamento(Integer codigo,
-			@NotBlank(message = "Campo não pode ser vazio") @NotNull(message = "Campo não pode ser vazio") @NotEmpty(message = "Campo não pode ser vazio") String nome) {
-		super();
-		this.codDepartamento = codigo;
-		this.nomeDepartamento = nome;
-	}
-
-
-	public Integer getCodigo() {
+	public Integer getCodDepartamento() {
 		return codDepartamento;
 	}
 
 
-	public void setCodigo(Integer codigo) {
-		this.codDepartamento = codigo;
+	public void setCodDepartamento(Integer codDepartamento) {
+		this.codDepartamento = codDepartamento;
 	}
 
 
-	public String getNome() {
+	public String getNomeDepartamento() {
 		return nomeDepartamento;
 	}
 
 
-	public void setNome(String nome) {
-		this.nomeDepartamento = nome;
+	public void setNomeDepartamento(String nomeDepartamento) {
+		this.nomeDepartamento = nomeDepartamento;
 	}
 
 
@@ -81,9 +81,8 @@ public class Departamento {
 
 	@Override
 	public String toString() {
-		return "Departamento [codigo=" + codDepartamento + ", nome=" + nomeDepartamento + "]";
+		return "Departamento [codDepartamento=" + codDepartamento + ", nomeDepartamento=" + nomeDepartamento + "]";
 	}
-	
-	
-	
+
+
 }
