@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">en">
     <head>
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -41,6 +41,33 @@
                     <div class="sb-sidenav-menu">
                         <div class="nav">
                            
+                            
+                            <div class="collapse" id="collapsePages" aria-labelledby="headingTwo" data-bs-parent="#sidenavAccordion">
+                                <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages">
+                                    <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#pagesCollapseAuth" aria-expanded="false" aria-controls="pagesCollapseAuth">
+                                        Authentication
+                                        <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                                    </a>
+                                    <div class="collapse" id="pagesCollapseAuth" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordionPages">
+                                        <nav class="sb-sidenav-menu-nested nav">
+                                            <a class="nav-link" href="login.html">Login</a>
+                                            <a class="nav-link" href="register.html">Register</a>
+                                            <a class="nav-link" href="password.html">Forgot Password</a>
+                                        </nav>
+                                    </div>
+                                    <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#pagesCollapseError" aria-expanded="false" aria-controls="pagesCollapseError">
+                                        Error
+                                        <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                                    </a>
+                                    <div class="collapse" id="pagesCollapseError" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordionPages">
+                                        <nav class="sb-sidenav-menu-nested nav">
+                                            <a class="nav-link" href="401.html">401 Page</a>
+                                            <a class="nav-link" href="404.html">404 Page</a>
+                                            <a class="nav-link" href="500.html">500 Page</a>
+                                        </nav>
+                                    </div>
+                                </nav>
+                            </div>
                             <div class="sb-sidenav-menu-heading">Departamento</div>
                             <a class="nav-link" th:href="@{/novoDepartamento}">
                                 <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
@@ -70,6 +97,10 @@
                                 <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
                                 Listar Funcionario(a)
                             </a>
+                            
+                            
+                            
+                            
                             
                         </div>
                     </div>
@@ -111,7 +142,11 @@
                                             <label for="inputEmail">Departamento</label>	
                                             
                                             </div>
-                                                                                        
+                                            
+                                            
+                                            
+                                            
+                                            
                                                                                      
                                             <div class="form-floating mb-3" style="left: 150px;">
 												<button type="submit" class="btn btn-primary"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-floppy" viewBox="0 0 16 16">
@@ -142,7 +177,7 @@
                 <footer class="py-4 bg-light mt-auto"  >
                     <div class="container-fluid px-4" >
                         <div class="d-flex align-items-center justify-content-between small" >
-                            <div class="text-muted" >Copyright &copy; Your Website 2024</div>
+                            <div class="text-muted" >Copyright &copy; Your Website 2023</div>
                             <div >
                                 <a href="#">Privacy Policy</a>
                                 &middot;

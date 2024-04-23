@@ -71,6 +71,10 @@
                                 Listar Funcionario(a)
                             </a>
                             
+                            
+                            
+                            
+                            
                         </div>
                     </div>
                    
@@ -111,7 +115,11 @@
                                             <label for="inputEmail">Departamento</label>	
                                             
                                             </div>
-                                                                                        
+                                            
+                                            
+                                            
+                                            
+                                            
                                                                                      
                                             <div class="form-floating mb-3" style="left: 150px;">
 												<button type="submit" class="btn btn-primary"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-floppy" viewBox="0 0 16 16">
@@ -142,7 +150,7 @@
                 <footer class="py-4 bg-light mt-auto"  >
                     <div class="container-fluid px-4" >
                         <div class="d-flex align-items-center justify-content-between small" >
-                            <div class="text-muted" >Copyright &copy; Your Website 2024</div>
+                            <div class="text-muted" >Copyright &copy; Your Website 2023</div>
                             <div >
                                 <a href="#">Privacy Policy</a>
                                 &middot;
