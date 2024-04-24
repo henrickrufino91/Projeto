@@ -4,11 +4,10 @@ import java.time.LocalDate;
 import java.util.Objects;
 
 import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.NotEmpty;
-import javax.validation.constraints.NotNull;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -46,17 +45,15 @@ public class Funcionario {
 	private LocalDate dataSaida;
 	
 	
-	@ManyToOne
-	@JoinColumn(name = "Cargos_codigo",nullable = false)
+	@ManyToOne(fetch = FetchType.LAZY)
+	 @JoinColumn(nullable = false)
 	private Cargos cargos;
 
 
-	public Funcionario(Integer codFuncionario,
-			@NotBlank(message = "Campo não pode ser vazio") @NotNull(message = "Campo não pode ser vazio") @NotEmpty(message = "Campo não pode ser vazio") String nomeFuncionario,
-			@NotBlank(message = "Campo não pode ser vazio") @NotNull(message = "Campo não pode ser vazio") @NotEmpty(message = "Campo não pode ser vazio") LocalDate dataNascimento,
-			@NotBlank(message = "Campo não pode ser vazio") @NotNull(message = "Campo não pode ser vazio") @NotEmpty(message = "Campo não pode ser vazio") Double salario,
-			@NotBlank(message = "Campo não pode ser vazio") @NotNull(message = "Campo não pode ser vazio") @NotEmpty(message = "Campo não pode ser vazio") LocalDate dataEntrada,
-			LocalDate dataSaida, Cargos cargos) {
+	public Funcionario(Integer codFuncionario, @NotBlank(message = "Campo não pode ser vazio") String nomeFuncionario,
+			@NotBlank(message = "Campo não pode ser vazio") LocalDate dataNascimento,
+			@NotBlank(message = "Campo não pode ser vazio") Double salario,
+			@NotBlank(message = "Campo não pode ser vazio") LocalDate dataEntrada, LocalDate dataSaida, Cargos cargos) {
 		super();
 		this.codFuncionario = codFuncionario;
 		this.nomeFuncionario = nomeFuncionario;
