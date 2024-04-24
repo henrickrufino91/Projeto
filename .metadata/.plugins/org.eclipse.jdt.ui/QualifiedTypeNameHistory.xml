@@ -4,10 +4,18 @@
     <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="org.springframework.data.jpa.repository.Query"/>
     <fullyQualifiedTypeName name="br.com.projeto.rh.model.FuncionarioDTO"/>
-    <fullyQualifiedTypeName name="br.com.projeto.rh.model.Cargos"/>
     <fullyQualifiedTypeName name="jakarta.persistence.Tuple"/>
-    <fullyQualifiedTypeName name="br.com.projeto.rh.model.Funcionario"/>
     <fullyQualifiedTypeName name="java.lang.annotation.Native"/>
     <fullyQualifiedTypeName name="jakarta.persistence.NamedNativeQuery"/>
     <fullyQualifiedTypeName name="br.com.projeto.rh.DTO.FuncionarioDTO"/>
+    <fullyQualifiedTypeName name="javax.validation.constraints.Size"/>
+    <fullyQualifiedTypeName name="jakarta.persistence.Column"/>
+    <fullyQualifiedTypeName name="org.hibernate.annotations.Cascade"/>
+    <fullyQualifiedTypeName name="org.hibernate.annotations.OnDelete"/>
+    <fullyQualifiedTypeName name="org.hibernate.annotations.OnDeleteAction"/>
+    <fullyQualifiedTypeName name="jakarta.persistence.OneToMany"/>
+    <fullyQualifiedTypeName name="jakarta.persistence.JoinColumn"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="br.com.projeto.rh.model.Funcionario"/>
+    <fullyQualifiedTypeName name="br.com.projeto.rh.model.Cargos"/>
 </qualifiedTypeNameHistroy>
